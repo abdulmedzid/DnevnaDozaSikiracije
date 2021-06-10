@@ -3,8 +3,6 @@ Android app that reads the rss feed of the klix.ba website and presents the arti
 
 -------------
 
-<br/><br/>
-<br/><br/>
 <img src="./app/sampledata/splash.png" width="30%" height="30%">
 &ensp;
 <img src="./app/sampledata/home.png" width="30%" height="30%">
