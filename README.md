@@ -2,8 +2,6 @@
 Android app that reads the rss feed of the klix.ba website and presents the articles in a simple UI with top comments that are bound to evoke some feelings in the user.
 
 -------------
-
-<br/><br/>
 <br/><br/>
 <img src="./app/sampledata/splash.png" width="30%" height="30%">
 &ensp;
