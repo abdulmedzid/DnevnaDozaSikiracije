@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/paper" />
-    <item android:drawable="@drawable/sikirant" android:gravity="bottom"/>
-    <item android:drawable="@drawable/dnevnadozasikiracije" android:gravity="center"/>
+
+    <item android:top="100dp">
+        <bitmap android:src="@drawable/dnevnadozasikiracije" android:gravity="center|top"/>
+    </item>
+
+    <item>
+        <bitmap android:src="@drawable/sikirant" android:gravity="center|bottom"/>
+    </item>
+
 </layer-list>

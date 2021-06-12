@@ -1,5 +1,7 @@
 package com.whoopedu.dnevnadozasikiracije.model;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,15 +9,16 @@ public class Article {
     public int id;
     public String title;
     public String description;
+    public String category;
     public String url;
     public String thumbnailUrl;
     public Date date;
     ArrayList<Comment> comments;
 
-    public Article(int id, String title, String description, String url, String thumbnailUrl, Date date, ArrayList<Comment> comments) {
-        this.id = id;
+    public Article(String title, String description, String category, String url, String thumbnailUrl, Date date, ArrayList<Comment> comments) {
         this.title = title;
         this.description = description;
+        this.category = category;
         this.url = url;
         this.thumbnailUrl = thumbnailUrl;
         this.date = date;
@@ -44,6 +47,14 @@ public class Article {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getUrl() {
@@ -76,5 +87,13 @@ public class Article {
 
     public void setComments(ArrayList<Comment> comments) {
         this.comments = comments;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("id: ").append(id).append(" title: ").append(title).append(" desc: ").append(description);
+        return sb.toString();
     }
 }
