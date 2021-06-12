@@ -96,8 +96,15 @@ public class RssFeedParser {
             }
         }
 
-        Article article = new Article(title, description, category, url, thumbnailUrl, new Date(), null);
-        return article;
+        return new Article(
+                title,
+                description,
+                category,
+                url,
+                thumbnailUrl,
+                dateString,
+                null
+        );
     }
 
     // Processes title tags in the feed.

@@ -12,10 +12,10 @@ public class Article {
     public String category;
     public String url;
     public String thumbnailUrl;
-    public Date date;
+    public String date;
     ArrayList<Comment> comments;
 
-    public Article(String title, String description, String category, String url, String thumbnailUrl, Date date, ArrayList<Comment> comments) {
+    public Article(String title, String description, String category, String url, String thumbnailUrl, String date, ArrayList<Comment> comments) {
         this.title = title;
         this.description = description;
         this.category = category;
@@ -73,11 +73,11 @@ public class Article {
         this.thumbnailUrl = thumbnailUrl;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

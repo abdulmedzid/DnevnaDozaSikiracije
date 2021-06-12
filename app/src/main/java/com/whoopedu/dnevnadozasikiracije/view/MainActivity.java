@@ -1,5 +1,7 @@
 package com.whoopedu.dnevnadozasikiracije.view;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
 
     @Override
     public void showArticles(List<Article> articles) {
-        ArticlesAdapter adapter = new ArticlesAdapter(articles);
+        ArticlesAdapter adapter = new ArticlesAdapter(articles, this);
         mArticlesRecyclerView.setAdapter(adapter);
     }
 }

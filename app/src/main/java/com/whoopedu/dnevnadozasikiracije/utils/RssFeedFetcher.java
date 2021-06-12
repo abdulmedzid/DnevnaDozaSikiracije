@@ -2,6 +2,11 @@ package com.whoopedu.dnevnadozasikiracije.utils;
 
 import android.content.Context;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 public class RssFeedFetcher {
 
     private static final String URL = "https://www.klix.ba/rss";
@@ -13,7 +18,6 @@ public class RssFeedFetcher {
     }
 
     public void getRssFeed(Context ctx) {
-        /*
         RequestQueue queue = Volley.newRequestQueue(ctx);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL,
@@ -22,8 +26,6 @@ public class RssFeedFetcher {
         );
 
         queue.add(stringRequest);
-        */
-        mListener.onRssFetchedRssFeed(TEST);
     }
 
     public interface RssFeedFetcherListener {

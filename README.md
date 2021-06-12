@@ -11,12 +11,14 @@ Android app that reads the rss feed of the klix.ba website and presents the arti
 
 ## Library
 * [Volley](https://github.com/google/volley)
+* [Glide](https://github.com/bumptech/glide)
 
 ## RSS
-[Klix](https://klix.ba/rss)
+* [Klix](https://klix.ba/rss)
 
 ## Architecture
 * Java
+* XmlPullParser
 * MVP - Model View Presenter
 * Room
 
