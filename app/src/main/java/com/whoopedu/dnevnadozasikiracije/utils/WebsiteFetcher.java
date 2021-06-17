@@ -1,4 +1,4 @@
 package com.whoopedu.dnevnadozasikiracije.utils;
 
-public class WebsiteGetter {
+public class WebsiteFetcher {
 }

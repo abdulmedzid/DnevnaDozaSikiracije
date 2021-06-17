@@ -1,6 +1,5 @@
 package com.whoopedu.dnevnadozasikiracije.utils;
 
-import android.util.Log;
 import android.util.Xml;
 
 import com.whoopedu.dnevnadozasikiracije.model.Article;
@@ -8,13 +7,9 @@ import com.whoopedu.dnevnadozasikiracije.model.Article;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class RssFeedParser {
@@ -27,7 +22,7 @@ public class RssFeedParser {
     private static final String DESCRIPTION_TAG = "description";
     private static final String CATEGORY_TAG = "category";
     private static final String URL_TAG = "link";
-    private static final String THUMBNAIL_TAG = "media:content"; // mozda media:content
+    private static final String THUMBNAIL_TAG = "media:content";
     private static final String THUMBNAIL_URL_ATTR = "url";
     private static final String DATE_TAG = "pubDate";
 
@@ -47,7 +42,6 @@ public class RssFeedParser {
                 continue;
             }
             String name = parser.getName();
-            Log.d("tag_name", name);
             // Starts by looking for the entry tag
             if (name.equals(ARTICLE_TAG)) {
                 entries.add(readEntry(parser));
@@ -78,7 +72,6 @@ public class RssFeedParser {
                 continue;
             }
             String name = parser.getName();
-            Log.d("parser.name", name);
             if (name.equals(TITLE_TAG)) {
                 title = readTitle(parser);
             } else if (name.equals(DESCRIPTION_TAG)) {
@@ -143,7 +136,6 @@ public class RssFeedParser {
     private String readThumbnailTag(XmlPullParser parser) throws IOException, XmlPullParserException {
         parser.require(XmlPullParser.START_TAG, ns, THUMBNAIL_TAG);
         String thumbnailUrl = parser.getAttributeValue(null, THUMBNAIL_URL_ATTR);
-        Log.d("thumbnailUrl", thumbnailUrl);
         skip(parser);
         parser.require(XmlPullParser.END_TAG, ns, THUMBNAIL_TAG);
         return thumbnailUrl;
